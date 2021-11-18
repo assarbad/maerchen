@@ -1,0 +1,8 @@
+.hg/
+**.aux
+**.log
+**.odt
+**.pdf
+**.synctex.gz
+**.fdb_latexmk
+**.fls
