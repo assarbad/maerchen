@@ -5,10 +5,19 @@
 \usepackage[autostyle]{csquotes} %% [autostyle,german=guillemets]
 
 \setkomafont{disposition}{\bfseries} % Hauptfont auch für Überschriften
-\setmainfont{UnifrakturMaguntia}[Ligatures={TeX,Historic}]
-%\setmainfont{TeX Gyre Bonum}[RawFeature=+longssub]
 
 \begin{document}
+\catcode`ſ=\active % Make ſ active
+\newcommand ſ{s} % Now we can let it expand to s
+\setmainfont{Cormorant Garamond}
+\input{texte/der-suesse-brei}
+\input{texte/die-sterntaler}
+\input{texte/der-hase-und-der-igel-platt}
+\newpage
+%% Undefine the command
+\let ſ\undefined
+\catcode`ſ=11 % Make ſ letter again
+\setmainfont{UnifrakturMaguntia}[Ligatures={TeX,Historic}]
 \input{texte/der-suesse-brei}
 \input{texte/die-sterntaler}
 \input{texte/der-hase-und-der-igel-platt}
